@@ -1,0 +1,3 @@
+﻿  Snake.cpp
+C:\Users\salar\Documents\VisualBasicC++\ConsoleApplications\Snake\Snake\Snake.cpp(23,7): warning C4101:  'lastmove': unreferenced local variable
+  Snake.vcxproj -> C:\Users\salar\Documents\VisualBasicC++\ConsoleApplications\Snake\Debug\Snake.exe
