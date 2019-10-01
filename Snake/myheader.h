@@ -40,12 +40,37 @@
 
 /*
 //setting a color to a specific text
-void setcolor(char text[], char color[]) {
+void printcolor(char text[], char color[]) {
 	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), color);
 	printf("%s", text);
 	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), WHITE);
 }
 */
+
+/*
+//setting a color to a specific text
+void setcolor(char color[]) {
+	char color2[] = color;
+	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), color2);
+}
+*/
+
+void resetcolor() {
+	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), WHITE);
+}
+
+//clear
+void clear(int x, int y, int length) {
+	for (int l = 0; l < length; l++) {
+		COORD coord;
+		coord.X = x;
+		coord.Y = y;
+		SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coord);
+		printf("%c",' ');
+		x++;
+	}
+}
+
 
 //print a string to a coordination
 void printstr(int x, int y, const char string[]) {
